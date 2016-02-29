@@ -1,4 +1,7 @@
 {
+    "name": "ernestoponce/slimProject",
+    "description": "A template for slim framework project (api,admin,website)",
+
     "require": {
         "slim/slim": "2.*",
         "j4mie/paris": "1.3.*",
