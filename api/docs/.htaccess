@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /docs/
+RewriteRule ^api-docs.json/(.*)$ $1 [L]  #Fixes Swagger php api-docs.json missed addition of basePath
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^ index.php [QSA,L]
