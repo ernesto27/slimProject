@@ -28,6 +28,11 @@ $loader = new FileLoader(new Filesystem, '../lang');
 $translator = new Translator($loader, 'en');
 $validation = new Factory($translator, new Container);
 
+$validation->extend('string_accents', function($attribute, $value, $parameters, $validator) {
+    return preg_match('/^([A-Za-záéíóúàèìòù\s]+)$/', $value);
+});
+
+
 // Controllers
 require_once '../controllers/admin/UserController.php';
 $userController = new UserController($app);

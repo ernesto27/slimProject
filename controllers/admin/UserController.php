@@ -34,7 +34,7 @@ class UserController
 		$errors = null;
 		$resp = array("status" => "ok");
 		$validator = $validation->make($post, array(
-			'email' => 'required|email',
+			'email' => 'required|email|string_accents',
 			'password' => 'required',
 			'phone' => 'required|numeric'
 		));
